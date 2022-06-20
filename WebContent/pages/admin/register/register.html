@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro de usuario</title>
+	<meta name="description" content="Site da Padaria XYZ">
+	<meta name="keywords" content="Pães, doces, salgados">
+	<meta name="author" content="Heihachi Kaneko">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../../css/admin.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="../../../js/admin.js"></script>
+	<script src="../../../js/register.js"></script>
+	<script src="../../../js/jquery-ui.js"></script>
+</head>
+
+
+<body>
+	<header></header>
+	
+	<section>
+		<div class="content">
+			<h2>Cadastro de usuario</h2>
+		</div>
+		
+		<div>
+			<form name="formAddUser" id="addUser" class="formInsert">
+				<fieldset>
+					<legend>Novo usuario</legend>
+					<table>
+						<tr>
+							<th>Nome</th>
+							<td>
+								<input type="text" id="nome" autocomplete="off">
+							</td>
+						</tr>
+						<tr>
+							<th>E-mail</th>
+							<td>
+								<input type="text" id="email" autocomplete="off">
+							</td>
+						</tr>
+						<tr>
+							<th>Senha</th>
+							<td>
+								<input type="password" id="senha" autocomplete="off">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button type="button" onclick="BAKERY.user.register()">Cadastrar</button>
+								<button type="reset">Cancelar</button>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+			<h3>Usuarios registrados</h3>
+			<form id="filtraUsuario" class="frmFiltrar">
+				<fieldset>
+					<legend>Filtrar</legend>
+					<input type="text" name="txtbusca" id="campoBuscaUsuario" placeholder="Pesquise pelo usuario">
+					<button type="button" onclick="BAKERY.user.buscar()">Buscar</button>
+				</fieldset>
+			</form>
+			<div id="listaUsuarios" class="listaRegistros"></div>
+			<div id="modalEditaUsuario" class="modalEditar">
+				<form name="frmEditaUsuario" id="editaUsuario" class="frmEditar">
+					<table>
+						<tr>
+							<th>Id</th>
+							<td>
+								<input type="hidden" name="identificacao">
+							</td>
+						</tr>
+						<tr>
+							<th>Nome</th>
+							<td>
+								<input type="text" name="nome">
+							</td>
+						</tr>
+						<tr>
+							<th>Email</th>
+							<td>
+								<input type="text" name="email">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<footer></footer>
+
+</body>
+
+
+</html>
